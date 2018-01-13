@@ -24,5 +24,9 @@ public enum Operation {
         public String toString() {
             return "divided by";
         }
+    },
+    SREDNIA{
+        @Override
+        public String toString() {return "Srednia: ";}
     }
 }

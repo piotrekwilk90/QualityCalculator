@@ -27,6 +27,14 @@
             android:layout_width="match_parent"
             android:inputType="numberDecimal">
         </EditText>
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="5pt"
+            android:id="@+id/etNum3"
+            android:layout_width="match_parent"
+            android:inputType="numberDecimal">
+        </EditText>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -66,6 +74,14 @@
             android:text="/"
             android:textSize="8pt"
             android:id="@+id/btnDiv">
+        </Button>
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:text="srednia"
+            android:textSize="8pt"
+            android:id="@+id/btnSre">
         </Button>
     </LinearLayout>
     <TextView

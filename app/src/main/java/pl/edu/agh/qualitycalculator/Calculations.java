@@ -9,15 +9,17 @@ public class Calculations {
             return subtract(operand1, operand2);
         } else if (op.equals(Operation.DIVIDE)) {
             return divide(operand1, operand2);
-        } else if (op.equals(Operation.MULTIPLY)) {
-            return multiply(operand1, operand2);
         } else {
-            throw new Exception("Unknown operation");
+            return multiply(operand1, operand2);
+
         }
     }
 
     private float sum(float operand1, float operand2) {
         return operand1 + operand2;
+    }
+    private float srednia(float operand1, float operand2, float operand3){
+        return (operand1+operand2+operand3)/3;
     }
 
     private float subtract(float operand1, float operand2) {
