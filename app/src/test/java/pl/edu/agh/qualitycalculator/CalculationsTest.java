@@ -21,7 +21,7 @@ public class CalculationsTest {
 
     @Test
     public void testDiv() throws Exception {
-        assertEquals(2,calculationsUnderTest.calculate(Operation.DIVIDE, 6,3), 0.01);
+        assertEquals(2,calculationsUnderTest.calculate(Operation.DIVIDE, 4,2), 0.01);
 
     }
     @Test
