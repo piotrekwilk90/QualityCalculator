@@ -22,6 +22,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
     Button btnDiv;
     Button btnSre;
 
+    float num3;
+    float num2;
+    float num1;
+
     TextView tvResult;
 
     Calculations calculations = new Calculations();
@@ -80,11 +84,30 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
         }
 
-        float num1 = Float.parseFloat(etNum1.getText().toString());
-        float num2 = Float.parseFloat(etNum2.getText().toString());
+        if (etNum3.getText().toString().matches("")){
+            num3 =0;
+        }else{
+            num3 = Float.parseFloat(etNum3.getText().toString());
+        }
+
+        if (etNum2.getText().toString().matches("")){
+            num2 =0;
+        }else{
+            num2 = Float.parseFloat(etNum2.getText().toString());
+        }
+        if (etNum1.getText().toString().matches("")){
+            num1 =0;
+        }else{
+            num1 = Float.parseFloat(etNum1.getText().toString());
+        }
+
+
+
+
         try {
-            float result = calculations.calculate(selectedOperation, num1, num2);
-            String verbalizedOperation = verbalizer.verbalize(selectedOperation, num1, num2, result);
+
+            float result = calculations.calculate(selectedOperation, num1, num2,num3);
+            String verbalizedOperation = verbalizer.verbalize(selectedOperation, num1, num2, num3, result);
             tvResult.setText(verbalizedOperation);
         }
         catch (Exception ex) {
