@@ -27,6 +27,6 @@ public enum Operation {
     },
     SREDNIA{
         @Override
-        public String toString() {return "Srednia: ";}
+        public String toString() {return "srednia: ";}
     }
 }

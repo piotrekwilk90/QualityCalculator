@@ -8,8 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import pl.edu.agh.qualitycalculator.R;
-
 public class MainActivity extends Activity implements View.OnClickListener {
 
     EditText etNum1;
@@ -59,7 +57,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if (TextUtils.isEmpty(etNum1.getText().toString())
-                || TextUtils.isEmpty(etNum2.getText().toString())) {
+                || TextUtils.isEmpty(etNum2.getText().toString())
+                    || TextUtils.isEmpty((etNum3.getText().toString()))) {
             tvResult.setText("Enter some data to calculate");
             return;
         }
@@ -83,23 +82,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
             default:
                 break;
         }
+        num1 = Float.parseFloat(etNum1.getText().toString());
+        num2 = Float.parseFloat(etNum2.getText().toString());
+        num3 = Float.parseFloat(etNum3.getText().toString());
 
-        if (etNum3.getText().toString().matches("")){
-            num3 =0;
-        }else{
-            num3 = Float.parseFloat(etNum3.getText().toString());
-        }
-
-        if (etNum2.getText().toString().matches("")){
-            num2 =0;
-        }else{
-            num2 = Float.parseFloat(etNum2.getText().toString());
-        }
-        if (etNum1.getText().toString().matches("")){
-            num1 =0;
-        }else{
-            num1 = Float.parseFloat(etNum1.getText().toString());
-        }
 
 
 
@@ -107,8 +93,15 @@ public class MainActivity extends Activity implements View.OnClickListener {
         try {
 
             float result = calculations.calculate(selectedOperation, num1, num2,num3);
-            String verbalizedOperation = verbalizer.verbalize(selectedOperation, num1, num2, num3, result);
-            tvResult.setText(verbalizedOperation);
+            if(selectedOperation == Operation.SREDNIA){
+                String verbalizedOperation = verbalizer.verbalizeSrednia(num1,num2,num3,result);
+                tvResult.setText(verbalizedOperation);
+
+
+            }else {
+                String verbalizedOperation = verbalizer.verbalize(selectedOperation, num1, num2, num3, result);
+                tvResult.setText(verbalizedOperation);
+            }
         }
         catch (Exception ex) {
             tvResult.setText("An error ocurred: " + ex.toString());

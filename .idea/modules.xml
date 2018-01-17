@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/QualityCalculator.iml" filepath="$PROJECT_DIR$/.idea/QualityCalculator.iml" />
-      <module fileurl="file://$PROJECT_DIR$/QualityCalculator.iml" filepath="$PROJECT_DIR$/QualityCalculator.iml" />
+      <module fileurl="file://D:\Zaliczenie\QualityCalculator\QualityCalculator.iml" filepath="D:\Zaliczenie\QualityCalculator\QualityCalculator.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

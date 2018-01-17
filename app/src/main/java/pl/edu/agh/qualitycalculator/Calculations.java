@@ -30,25 +30,21 @@ public class Calculations {
 
     private float multiply(float operand1, float operand2, float operand3) {
 
-        if (operand3 == 0){
-            return operand1 * operand2;
-        }else{
+
 
 
             return operand1 * operand2 * operand3;
 
-        }
+
     }
 
     private float divide(float operand1, float operand2, float operand3) {
-        if (operand3 == 0){
-            return operand1 / operand2;
-        }else{
+
 
 
             return operand1 / operand2 / operand3;
 
-        }
+
 
 
     }
